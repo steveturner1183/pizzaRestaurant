@@ -1,0 +1,90 @@
+
+<!-- Form for ordering -->
+<!-- 
+Sources
+
+Handlebars dropdown
+https://jsfiddle.net/jddevight/pxbk260z/
+
+
+Nested #each statements using ../ to access parent
+https://stackoverflow.com/questions/14059157/handlebars-js-each-loop-inside-another-each-loop-3
+
+Accessing sql fields in node
+https://www.w3schools.com/nodejs/nodejs_mysql_select.asp
+
+-->
+<h3>Choose Kid's Menu Options</h3>
+
+<label>Kids Menu: </label>
+<label for="balloonChoice">Get balloon item:</label>
+<input type="checkbox" id="balloonChoiceId" name="balloon">
+
+<label for="candyChoice">Get candy item:</label>
+<input type="checkbox" id="candyChoiceId" name="candy">
+
+<label for="ballChoice">Get ball item:</label>
+<input type="checkbox" id="ballChoiceId" name="ball">
+
+<label for="autographChoice">Get autograph item:</label>
+<input type="checkbox" id="autographChoiceId" name="autograph">
+
+<br>
+<h3>Enter Customer Id</h3>
+
+<label for="customerId">Customer Id:</label>
+<input type="number" id="customerId">
+
+<br>
+<h3>Select Pizza Options</h3>
+<br>
+<table id="orderTable" class="table">
+    <thead>
+        <th>Size</th>
+        <th>Topping 1</th>
+        <th>Topping 2</th>
+        <th>Topping 3</th>
+    </thead>
+
+    <tbody>
+    {{#if pizza}}
+        {{#each pizza}}  <!-- Create a row for 10 pizzas items-->
+        <tr id="{{this.num}}">
+            <td>
+            <select id="{{this.sizeId}}"> <!-- Each atttribute is labeled with the pizza number next to it, number added in app.js-->
+                {{#each ../size}}
+                <option value="{{this.size}}">{{this.size}}</option>
+                {{/each}}
+            </select>
+            </td>
+
+            <td>
+            <select id="{{this.topping1Id}}">
+                {{#each ../toppings}}
+                <option value="{{this.topping_id}}">{{this.name}}</option>
+                {{/each}}
+            </select>
+            </td>
+
+            <td>
+            <select id="{{this.topping2Id}}">
+                {{#each ../toppings}}
+                <option value="{{this.topping_id}}">{{this.name}}</option>
+                {{/each}}
+            </select>
+            </td>
+
+            <td>
+            <select id="{{this.topping3Id}}">
+                {{#each ../toppings}}
+                <option value="{{this.topping_id}}">{{this.name}}</option>
+                {{/each}}
+            </select>
+        </td></tr>{{/each}}{{/if}}</tbody>
+</table>
+
+<br>
+
+<input type="button" value="Place Order" id="order">
+
+<script src="Script-order.js"></script>

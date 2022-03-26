@@ -1,0 +1,25 @@
+<h3>Search for order history of an existing customer:</h3>
+
+<table id="orderHistoryTable"><tbody>
+
+<tr>
+<label for="customerd">Enter Customer ID:</label>
+<input type="number" id="customerId"><br>
+
+<select id="historySelect">
+    <option value="Pizzas">Pizzas</option>
+    <option value="Set_Of_Pizzas">Set_Of_Pizzas</option>
+    <option value="Customer_Orders">Customer_Orders</option>
+</select><br>
+
+<input type ="button" value="Search" id="orderSearch">
+</tr>
+
+</tbody></table>
+
+<table id="historyDisplay" class="tableDisplay">
+    <tbody id="historyBody">
+    </tbody>
+</table>
+
+<script src="Script-orderHistory.js"></script>

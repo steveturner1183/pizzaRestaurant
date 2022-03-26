@@ -1,0 +1,46 @@
+<script src="Script-accountManagement.js"></script>
+<!-- Form for ordering -->
+
+
+<!-- Customer account management -->
+
+<form>
+    <label for="firstName">First Name:</label>
+    <input type="text" id="firstName" name="firstName">
+
+    <label for="lastName">Last Name:</label>
+    <input type="text" id="lastName" name="lastName">
+
+    <label for="lastName">Email:</label>
+    <input type="text" id="email" name="email">
+
+    <input type="submit" value="Create Account">
+</form>
+
+
+
+<div id="aboutContainer" class="container">
+
+  <h1>All about the app.</h1>
+
+</div>
+
+
+
+<div id="resultsArea" class="row">
+    <table>
+      <thead>
+        <tr>
+          <th>customer id</th>
+          <th>first name</th>
+          <th>last name</th>
+          <th>email</th>
+        </tr>
+      </thead>
+      <tbody id="tableBody">
+      </tbody>
+    </table>
+    <span id="postResults"></span>
+    {{results}}
+  </div>
+</div>
