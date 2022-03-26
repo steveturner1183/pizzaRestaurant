@@ -9,3 +9,7 @@ Database management application for fictional pizza restaurant "Beaver Kits Rest
 Application supports Creating an account, Ordering pizzas, adding/removing choices for kids menu and toppings, and checking order history.  
 
 Access website here:https://beaver-kits.herokuapp.com/
+
+## **Credits**
+
+This was a team project with Joshua Gaidos 
